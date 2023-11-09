@@ -1,0 +1,27 @@
+{
+  "name": "vue-news-demo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "axios": "^1.5.1",
+    "element-plus": "^2.4.1",
+    "moment": "^2.29.4",
+    "path": "^0.12.7",
+    "querystring": "^0.2.1",
+    "sass": "^1.69.4",
+    "sass-loader": "^13.3.2",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.4.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "vite": "^4.4.11"
+  }
+}
