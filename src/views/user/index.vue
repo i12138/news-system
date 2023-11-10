@@ -19,13 +19,12 @@
         </el-form>
     </div>
     <el-carousel :interval="4000" type="card" height="400px">
-        <el-carousel-item v-for="item in newsData" :key="item.newsId">
+        <el-carousel-item v-for="item in newsData" :key="item.newsId" @click="getDetailNews(item)">
             <!-- 内容 -->
             <div class="news">
                 <div style="margin-top: 10px;"> <el-text class="title" truncated>{{ item.newsTitle }} </el-text></div>
                 <div><el-text tag="i">{{ formatDate(item.releaseDate) }}</el-text></div>
                 <div> <el-text line-clamp="14">{{ item.newsContent }}</el-text></div>
-                <!-- <div> <el-button text class="button">详细信息</el-button></div> -->
             </div>
         </el-carousel-item>
     </el-carousel>
@@ -55,6 +54,9 @@ export default {
         this.getNewsList({ size: this.pageSize, current: this.currentPage })
     },
     methods: {
+        getDetailNews(params) {
+            console.log(params)
+        },
         getNewsList(params) {
             newsList(params).then(res => {
                 this.newsData = res.data.data.records
