@@ -14,7 +14,7 @@ export default defineConfig({
     // 跨域问题
     proxy: {
       '/api': {
-        target: "http://192.168.231.89:8081",
+        target: "http://localhost:8081",
         secure: false,
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
